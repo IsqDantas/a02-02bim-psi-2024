@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="m-5">
+    <div class="container">
+        <h1 id="magicLabel">A mágica começou...</h1>
+        <button id="magic" class="btn btn-primary px-3">Mudar mágica</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('button#magic')
+        const label = document.querySelector('h1#magicLabel')
+
+        button.addEventListener('click', () => {
+            label.innerHTML = "A mágica continua!"
+        })
+    })
+</script>
+</body>
+</html>

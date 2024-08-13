@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="m-5">
+    <div class="container">
+        <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur facere ipsam
+            labore minima
+            quaerat, quidem velit? Ad assumenda autem commodi cupiditate facere, id, iste laborum perspiciatis, quidem
+            sequi tempore!</p>
+        <div class="d-flex gap-3">
+            <button id="hide" type="button" class="btn btn-primary px-3">Ocultar</button>
+            <button id="show" type="button" class="btn btn-primary px-3">Mostrar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hideButton = document.querySelector('button#hide')
+        const showButton = document.querySelector('button#show')
+        const paragraph = document.querySelector('p#paragraph')
+
+        hideButton.addEventListener('click', () => {
+            setVisibility(paragraph, false)
+        })
+
+        showButton.addEventListener('click', () => {
+            setVisibility(paragraph, true)
+        })
+    })
+
+    function setVisibility(element, mustBeVisible) {
+        element.style.display = mustBeVisible ? 'block' : 'none'
+    }
+</script>
+</body>
+</html>

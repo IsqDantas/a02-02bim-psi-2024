@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="m-5">
+    <div class="container">
+        <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur facere ipsam
+            labore minima
+            quaerat, quidem velit? Ad assumenda autem commodi cupiditate facere, id, iste laborum perspiciatis, quidem
+            sequi tempore!</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const p = document.querySelector('p#paragraph')
+        p.addEventListener('click', () => {
+            p.style.color = 'green'
+        })
+    })
+</script>
+</body>
+</html>
